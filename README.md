@@ -2,6 +2,9 @@
 <h4>Codes:</h4>
 One source code file generates word2vec models while the other two are for downstream tasks (SA & NER).
 
+<h4>W2V Model window8_skipgram_negativesampling:</h4>
+<a href="https://drive.google.com/open?id=1dlnrcg7aJcB73E06w4xsRiJIvuTBKht-">download</a>
+
 <h4>License:</h4>
 All codes and models are released under CCBY 4.0.
 
