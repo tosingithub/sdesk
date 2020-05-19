@@ -1,6 +1,6 @@
-# Simple Classifier for Sentiment Analysis
+# Tosin Adewumi
 """
-Sentiment Analysis on fairly balanced Amazon dataset of 1,000 records.
+Sentiment Analysis
 
 
 """
