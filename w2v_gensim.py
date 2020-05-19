@@ -1,9 +1,7 @@
 # Tosin Adewumi
 
 """
-First run:
-python -m gensim.scripts.make_wiki
-
+gensim word2vec models
 """
 
 import re
