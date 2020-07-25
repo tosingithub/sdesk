@@ -216,8 +216,8 @@ def training_proc(sentences, labels, run_on_test=False, use_pretrained=False, do
         model.eval()
         predictions = []
         counter = 0
+        eval_loss, eval_acc, eval_steps = 0, 0, 0
         for batch in val_dloader:
-            eval_loss, eval_acc, eval_steps = 0, 0, 0
             pred2 = []
             with torch.no_grad():                                       # no gradient compuation during validation
                 vbatch_inputs, vbatch_masks, vbatch_tags = batch
@@ -285,8 +285,8 @@ def training_proc(sentences, labels, run_on_test=False, use_pretrained=False, do
         predictions = []
         counter = 0
         starttime = time.time()
+        eval_loss, eval_acc, eval_steps = 0, 0, 0
         for batch in test_dloader:
-            eval_loss, eval_acc, eval_steps = 0, 0, 0
             pred2 = []
             with torch.no_grad():                                       # no gradient compuation during evaluation
                 tbatch_inputs, tbatch_masks, tbatch_tags = batch
