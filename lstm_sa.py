@@ -250,8 +250,8 @@ def training_proc(sentences, labels, run_on_test=False, use_pretrained=False, do
         model.eval()
         predictions = []
         num_correct, counter, acc_add = 0, 0, 0
+        eval_loss, eval_acc, eval_steps = 0, 0, 0
         for batch in val_dloader:
-            eval_loss, eval_acc, eval_steps = 0, 0, 0
             with torch.no_grad():                                       # no gradient computation during validation
                 vbatch_inputs, vbatch_masks, vbatch_tags = batch
                 vbatch_inputs = vbatch_inputs.to(device)
@@ -301,9 +301,9 @@ def training_proc(sentences, labels, run_on_test=False, use_pretrained=False, do
         model.eval()
         predictions = []
         starttime = time.time()
+        eval_loss, eval_acc, eval_steps = 0, 0, 0
         for batch in test_dloader:
-            eval_loss, eval_acc, eval_steps = 0, 0, 0
-            with torch.no_grad():                                       # no gradient compuation during evaluation
+            with torch.no_grad():                                       # no gradient computation during evaluation
                 tbatch_inputs, test_masks, tbatch_tags = batch
                 tbatch_inputs = tbatch_inputs.to(device)
                 tbatch_tags = tbatch_tags.to(device)
